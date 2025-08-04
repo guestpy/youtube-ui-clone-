@@ -1,0 +1,107 @@
+.top {
+    display: flex;  /* Change from flexbox to flex */
+    align-items: center;  /* Vertically center all items */
+    justify-content: space-between;  /* Spread items across the width */
+    padding: 0 16px;  /* Add some horizontal padding */
+    height: 56px;  /* Set a fixed height like YouTube */
+}
+
+.menudiv {
+    display: flex;
+    align-items: center;
+    gap: 16px;  /* Space between menu and logo */
+}
+
+.searchdiv {
+    display: flex;
+    align-items: center;
+    flex: 1;  /* Take up available space */
+    max-width: 1000px;  /* Limit search bar width */
+    margin: 0 40px;  /*Add horizontal margins*/
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    gap: 8px;  /* Space between sign-in and other options */
+}
+
+div .mic{
+    height: 40px;
+    width: 40px;
+    display: inline;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.mic img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.logo img{
+    height: 55px;
+    width: 90px;
+    display: inline;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.searchdiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.searchdiv .mic{
+    height: 40px;
+    width: 40px;
+    display: inline;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+
+}
+.searchbar{
+    border-radius: 50%;
+    height: 50px;
+    width: 250px;
+    padding: 2px 20px;
+}
+.options img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background: none;
+    display: inline;
+}
+.signin {
+    display: flex;
+    border:1px solid #065fd4;
+    border-radius: 18px;
+    padding: 0 15px;
+    height: 36px;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+}
+.signin img{
+    height: 20px;
+    width: 20px;
+    /* border-radius: 50%; */
+    color: #065fd4  ;
+    font-family: 'Roboto',sans-serif;
+}
+.signin a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #065fd4;
+    font-size: 14px;
+}
+.signin:hover{
+    background-color: #def1ff;
+}
