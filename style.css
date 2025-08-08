@@ -1,74 +1,161 @@
 .top {
-    display: flex;  /* Change from flexbox to flex */
-    align-items: center;  /* Vertically center all items */
-    justify-content: space-between;  /* Spread items across the width */
-    padding: 0 16px;  /* Add some horizontal padding */
-    height: 56px;  /* Set a fixed height like YouTube */
+    display: flex;
+    /* Change from flexbox to flex */
+    align-items: center;
+    /* Vertically center all items */
+    justify-content: space-between;
+    /* Spread items across the width */
+    padding: 0 16px;
+    /* Add some horizontal padding */
+    height: 25%;
+    /* Set a fixed height like YouTube */
 }
 
 .menudiv {
     display: flex;
     align-items: center;
-    gap: 16px;  /* Space between menu and logo */
+    gap: 16px;
+    /* Space between menu and logo */
 }
 
 .searchdiv {
     display: flex;
     align-items: center;
-    flex: 1;  /* Take up available space */
-    max-width: 1000px;  /* Limit search bar width */
-    margin: 0 40px;  /*Add horizontal margins*/
+    flex: 1;
+    /* Take up available space */
+    max-width: 1000px;
+    /* Limit search bar width */
+    margin: 0 40px;
+    /*Add horizontal margins*/
 }
 
 .options {
     display: flex;
     align-items: center;
-    gap: 8px;  /* Space between sign-in and other options */
+    gap: 8px;
+    /* Space between sign-in and other options */
+    /* background-color: white; */
 }
 
-div .mic{
+.setting {
     height: 40px;
     width: 40px;
-    display: inline;
     border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setting:hover {
+    background-color: #f2f2f2;
+}
+
+.setting img {
+    height: 24px;
+    width: 24px;
+    filter: brightness(0) saturate(100%);
+    /* Makes the icon black */
+}
+@media (max-width: 768px) and (min-width: 481px) {
+    /* Styles for devices between 481px and 768px */
+}
+@media (max-width: 480px) {
+    /* Styles for devices with a maximum width of 480px */
+    /* .top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .searchdiv {
+        width: 100%;
+        margin: 0;
+    }
+    .menudiv {
+        margin-bottom: 10px;
+    } */
+  #searchbar {
+    display: hidden;
+  }
+}
+
+div .mic {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
     background: none;
     cursor: pointer;
 }
-.mic img{
+
+.mic img {
     height: 20px;
     width: 20px;
     border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.logo img{
+.mic:hover{
+    background-color: #f2f2f2;
+}
+
+.logo img {
     height: 55px;
     width: 90px;
     display: inline;
     cursor: pointer;
     border-radius: 50%;
 }
+
 .searchdiv {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    /* border: 2px solid black; */
+    /* border-radius: 20px; */
 }
-.searchdiv .mic{
+
+.searchdiv .mic {
     height: 40px;
     width: 40px;
     display: inline;
     border: none;
     background: none;
+    background-color: white;
     cursor: pointer;
     border-radius: 50%;
 
 }
-.searchbar{
-    border-radius: 50%;
-    height: 50px;
-    width: 250px;
-    padding: 2px 20px;
+
+.searchbar {
+    width: 60%;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+
 }
-.options img{
+.searchbar:focus {
+    border-color: #065fd4;
+    box-shadow: 0 0 5px rgba(6, 95, 212, 0.5);
+}
+.searchbar::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+.setting:hover img {
+    filter: brightness(0) saturate(100%) invert(50%);
+    /* Makes the icon white on hover */
+}
+.options img {
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -76,10 +163,13 @@ div .mic{
     border: none;
     background: none;
     display: inline;
+    outline: none;
+    /* background-color: #ffffff; */
 }
+
 .signin {
     display: flex;
-    border:1px solid #065fd4;
+    border: 1px solid #065fd4;
     border-radius: 18px;
     padding: 0 15px;
     height: 36px;
@@ -87,14 +177,16 @@ div .mic{
     cursor: pointer;
     background: white;
 }
-.signin img{
+
+.signin img {
     height: 20px;
     width: 20px;
     /* border-radius: 50%; */
-    color: #065fd4  ;
-    font-family: 'Roboto',sans-serif;
+    color: #065fd4;
+    font-family: 'Roboto', sans-serif;
 }
-.signin a{
+
+.signin a {
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -102,6 +194,55 @@ div .mic{
     color: #065fd4;
     font-size: 14px;
 }
-.signin:hover{
+
+.signin:hover {
     background-color: #def1ff;
+}
+
+
+.suggessions {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 56px;
+    padding: 0 24px;
+    background-color: white;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.suggessions::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.suggessions img {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 12px;
+}
+
+.recomended {
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 0 6px;
+    font-size: 14px;
+    color: #0f0f0f;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.2s;
+}
+
+.recomended:hover {
+    background-color: #e5e5e5;
+}
+
+.recomended:first-of-type {
+    background-color: #0f0f0f;
+    color: white;
 }
