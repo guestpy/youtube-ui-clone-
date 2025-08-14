@@ -59,10 +59,13 @@
     filter: brightness(0) saturate(100%);
     /* Makes the icon black */
 }
+
 @media (max-width: 768px) and (min-width: 481px) {
     /* Styles for devices between 481px and 768px */
 }
+
 @media (max-width: 480px) {
+
     /* Styles for devices with a maximum width of 480px */
     /* .top {
         flex-direction: column;
@@ -76,9 +79,9 @@
     .menudiv {
         margin-bottom: 10px;
     } */
-  #searchbar {
-    display: hidden;
-  }
+    #searchbar {
+        display: hidden;
+    }
 }
 
 div .mic {
@@ -99,7 +102,8 @@ div .mic {
     align-items: center;
     justify-content: center;
 }
-.mic:hover{
+
+.mic:hover {
     background-color: #f2f2f2;
 }
 
@@ -142,10 +146,12 @@ div .mic {
     outline: none;
 
 }
+
 .searchbar:focus {
     border-color: #065fd4;
     box-shadow: 0 0 5px rgba(6, 95, 212, 0.5);
 }
+
 .searchbar::placeholder {
     color: #999;
     font-size: 14px;
@@ -155,6 +161,7 @@ div .mic {
     filter: brightness(0) saturate(100%) invert(50%);
     /* Makes the icon white on hover */
 }
+
 .options img {
     height: 20px;
     width: 20px;
@@ -208,11 +215,13 @@ div .mic {
     height: 56px;
     padding: 0 24px;
     background-color: white;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
 }
 
 .suggessions::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome/Safari */
+    display: none;
+    /* Hide scrollbar for Chrome/Safari */
 }
 
 .suggessions img {
@@ -245,4 +254,33 @@ div .mic {
 .recomended:first-of-type {
     background-color: #0f0f0f;
     color: white;
+}
+
+.navbar {
+    position:  sticky;
+    top: 0;
+    overflow: hidden;
+    border: #065fd4 1px solid;
+    border-radius: 0%;
+    background-color: white;
+
+}
+.content{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px; 
+    flex-wrap: wrap;
+    margin: 7px;
+}
+
+
+
+.video{
+    border: #065fd4 1px solid;
+    border-radius: 35%;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
 }
