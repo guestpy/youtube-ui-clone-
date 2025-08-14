@@ -260,7 +260,7 @@ div .mic {
     position:  sticky;
     top: 0;
     overflow: hidden;
-    border: #065fd4 1px solid;
+    /* border: #065fd4 1px solid; */
     border-radius: 0%;
     background-color: white;
 
@@ -277,10 +277,17 @@ div .mic {
 
 
 .video{
-    border: #065fd4 1px solid;
+    border: black 1px solid;
     border-radius: 35%;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     margin: 1rem;
+}
+
+.video-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
 }
